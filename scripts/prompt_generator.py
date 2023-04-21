@@ -30,7 +30,7 @@ class Model:
 
 
 def populate_models():
-    path = "./extensions/stable-diffusion-webui-Prompt_Generator/models.json"
+    path = "./extensions/SD_Webui_PromptGenerator_Alt/models.json"
     with open(path, 'r') as f:
         data = json.load(f)
     for item in data:
@@ -53,7 +53,7 @@ def add_to_prompt(num):  # A function that determines which prompt to pass
 
 def get_list_blacklist():
     # Set the directory you want to start from
-    file_path = './extensions/stable-diffusion-webui-Prompt_Generator/blacklist.txt'
+    file_path = './extensions/SD_Webui_PromptGenerator_Alt/blacklist.txt'
     things_to_black_list = []
     with open(file_path, 'r') as f:
         # Read each line in the file and append it to the list
@@ -154,7 +154,7 @@ def on_ui_tabs():
         with gr.Column():
             with gr.Row():
                 use_blacklist_checkbox = gr.Checkbox(label="Use blacklist?")
-                gr.HTML(value="<center>Using <code>\".\extensions\stable-diffusion-webui-Prompt_Generator\\blacklist.txt</code>\".<br>It will delete any matches to the generated result (case insensitive).</center>")
+                gr.HTML(value="<center>Using <code>\".\extensions\SD_Webui_PromptGenerator_Alt\\blacklist.txt</code>\".<br>It will delete any matches to the generated result (case insensitive).</center>")
         with gr.Column():
             with gr.Row():
                 populate_models()
